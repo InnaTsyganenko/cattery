@@ -16,39 +16,43 @@
 <body class="page-body">
   <header class="main-header">
     <nav class="main-header__navigation">
-      <a class="main-header__link" href="http://">
-        <img class="main-header__logo" src="img/logo.svg" width="55" height="25" alt="Логотип сайта">
+      <a class="main-header__link" href="##">
+        <svg class="main-header__logo" width="55" height="25" role="img" aria-hidden="true">
+          <use xlink:href="img/sprite.svg#logo-desktop"></use>
+        </svg>
       </a>
     </nav>
   </header>
   <main class="main">
     <h1 class="visually-hidden">Питомник Мейн-Кунов в Новосибирске</h1>
     <section class="acquaintance">
-      <h2 class="acquaintance__title">Питомник Мейн-Кунов</h2>
-      <p class="acquaintance__city-name">Новосибирск</p>
-      <p class="acquaintance__text">Первый питомник с расширенным спектром услуг</p>
-      <a class="acquaintaince__button button" type="button">Смотреть котиков</a>
-      <img class="acquaintaince__img" src="img/main-coon.jpg" width="1068" height="712" alt="Рыжий красавец мейн-кун">
+      <div class="acquaintance__container">
+        <h2 class="acquaintance__title">Питомник Мейн-Кунов</h2>
+        <p class="acquaintance__city-name">Новосибирск</p>
+        <p class="acquaintance__text">Первый питомник с расширенным<br>спектром услуг</p>
+        <a class="acquaintaince__button button" type="button">Смотреть котиков</a>
+      </div>
+      <img class="acquaintaince__img" src="img/main-coon-grey-acquaintance-desktop.png" width="1366" height="1991" alt="Серый красавец мейн-кун">
       <div class="acquaintaince__social-list social">
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link" href="##" aria-label="Ссылка Вконтакте">
               <svg class="social__link-icon" width="13" height="8" role="img" aria-hidden="true">
-                <use xlink:href="img/sprite.svg#icon-insta"></use>
+                <use xlink:href="img/sprite.svg#vk-acquaintance-desktop"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link" href="##" aria-label="Ссылка Twitter">
-              <svg class="social__link-icon" width="15" height="11" role="img" aria-hidden="true">
-                <use xlink:href="img/sprite.svg#icon-twitter"></use>
+              <svg class="social__link-icon" width="16" height="11" role="img" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#twitter-acquaintance-desktop"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link" href="##" aria-label="Ссылка Facebook">
-              <svg class="social__link-icon" width="6" height="10" role="img" aria-hidden="true">
-                <use xlink:href="img/sprite.svg#icon-facebook"></use>
+              <svg class="social__link-icon" width="6" height="12" role="img" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#fb-acquaintance-desktop"></use>
               </svg>
             </a>
           </li>
@@ -285,6 +289,6 @@
     <p class="main-footer__tel">+7 (383) 900-64-65</p>
   </footer>
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <script src="js/main.js"></script>
+  <script src="./bundle.js"></script>
 </body>
 </html>
