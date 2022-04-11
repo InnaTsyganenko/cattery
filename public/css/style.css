@@ -510,7 +510,6 @@ img {
 }
 
 .our-team__slider-item {
-  position: relative;
   display: grid;
   grid-template-areas: ". img overlay-area description ."
                   ". img overlay-area description ."
@@ -604,12 +603,12 @@ img {
 /* question-answer */
 
 .question-answer {
-  outline: 1px dotted rgb(255, 167, 167);
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 30px 91px;
   background-color: var(--basic-bg-lighten);
+  margin-bottom: 35px;
 }
 
 .question-answer__title {
@@ -626,19 +625,34 @@ img {
   font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: var(--basic-text-gold);
   margin: 0 auto;
-  margin-top: 23px;
+  margin-top: 19px;
   margin-bottom: 22px;
   line-height: 1.5em;
 }
 
 .question-answer__list {
-
+  counter-reset: li;
+  margin-top: 34px;
 }
 
 .question-answer__item {
-  margin-bottom: 50px;
+  position: relative;
   width: 793px;
-  margin-left: auto;
+  margin-left: 265px;
+  margin-right: auto;
+  margin-bottom: 35px;
+}
+
+.question-answer__item::before {
+  position: absolute;
+  top: 16px;
+  left: -116px;
+  counter-increment: li;
+  content: "0" counter(li);
+  color: var(--basic-text-gold);
+  font-family: Roboto, 'Open Sans', sans-serif;
+  font-size: 70px;
+  font-weight: bold;
 }
 
 .question-answer__item-question-block {
@@ -659,7 +673,7 @@ img {
   font-weight: 500;
   margin-bottom: 10px;
   color: #DDD0C3;
-  margin: 43px 46px;
+  margin: 43px 38px;
 }
 
 .question-answer__item.closed .question-answer__item-answer-block {
@@ -669,7 +683,8 @@ img {
 .question-answer__item.opened .question-answer__item-answer-block {
   border: 1px solid rgba(160, 123, 80, 0.43);
   border-top: none;
-  padding: 43px 40px;
+  padding: 22px 41px;
+  padding-right: 200px;
   margin-top: 0;
   margin-left: auto;
   color: #DDD0C3;
@@ -679,7 +694,7 @@ img {
 .question-answer__item-answer-text {
   font-size: 16px;
   line-height: 1.5em;
-  margin-bottom: 43px;
+  margin-bottom: 29px;
 }
 
 .question-answer__item-button-uncover {
@@ -688,7 +703,7 @@ img {
   justify-content: center;
   position: relative;
   grid-area: button;
-  width: 110px;
+  width: 104px;
   background: none;
   border: none;
   border-left: 1px solid rgba(160, 123, 80, 0.43);
@@ -697,8 +712,10 @@ img {
 
 .question-answer__item-button-uncover:hover,
 .question-answer__item-button-uncover:active,
+.question-answer__item-button-uncover:focus,
 .question-answer__item.opened .question-answer__item-button-uncover {
   background: var(--basic-text-gold);
+  border: 1px solid var(--basic-text-gold);
 }
 
 .question-answer__item.closed .question-answer__item-button-uncover::before {
@@ -713,5 +730,98 @@ img {
   content: "–";
   color: var(--basic-text-white);
   font-size: 36px;
+}
+
+.question-answer__item.closed .question-answer__item-button-uncover:hover::before,
+.question-answer__item.closed .question-answer__item-button-uncover:active::before,
+.question-answer__item.closed .question-answer__item-button-uncover:focus::before {
+  color: var(--basic-text-white);
+}
+
+/* comments */
+
+.comments {
+  outline: 1px dotted rgb(255, 167, 167);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px 91px;
+  background-color: var(--basic-bg-lighten);
+}
+
+.comments__title {
+  color: var(--basic-text-white);
+  font-family: 'Yeseva One', 'Times New Roman', cursive;
+  font-size: 36px;
+  font-weight: normal;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.comments__list {
+}
+
+.comments__item {
+
+}
+
+.comments__slider {
+  display: grid;
+  grid-template-areas: ". img overlay-area description ."
+                  ". img overlay-area description ."
+                  "button-left img overlay-area description button-right"
+                  ". img overlay-area description .";
+  justify-content: normal;
+}
+
+.comments__blockquote {
+  grid-area: overlay-area / description;
+  background: rgba(21, 19, 19, 1);
+}
+
+.comments__author {
+
+}
+
+.comments__text {
+
+}
+
+.comments__date {
+
+}
+
+.comments__img {
+  grid-area: img / overlay-area;
+  justify-self: end;
+  margin-right: -30px;
+}
+
+.comments__social-list {
+
+}
+
+.comments__social-item {
+
+}
+
+.comments__social-link {
+
+}
+
+.comments__social-icon {
+
+}
+
+.comments__slider-button-left {
+
+}
+
+.comments__slider-button-right {
+
+}
+
+.comments__slider-arrow-icon {
+
 }
 
